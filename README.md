@@ -12,7 +12,7 @@ This is a simple mass converter web application created for Lab-Work#1 of Client
 - Displays results inside a styled container on the webpage.
 
 ## Live Demo
-[Live Demo](YOUR_GITHUB_PAGES_LINK_HERE)
+[Live Demo]( https://vd1101.github.io/JavaScript-Lab01/)
 
 ## How to Use
 1. Clone the repository:
