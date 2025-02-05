@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mass Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      margin: auto;
+    }
+    h2 {
+      color:  #007bff;
+    }
+    p {
+      font-size: 18px;
+      color: #555;
+    }
+    .result {
+      font-weight: bold;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Mass Converter</h2>
+  <p class="result" id="output"></p>
+</div>
+
+<script>
+  let userChoice;
+  
+  do {
+    userChoice = prompt("Input 1 to convert kg to lb,\nInput 2 to convert lb to kg,\nInput 3 to exit.");
+    userChoice = parseInt(userChoice);
+  } while (isNaN(userChoice) || (userChoice !== 1 && userChoice !== 2 && userChoice !== 3));
+
+  if (userChoice !== 3) {
+    let mass;
+    do {
+      mass = prompt("Enter the mass value to convert:");
+      mass = parseFloat(mass);
+    } while (isNaN(mass));
+
+    function convertKgToLb(kg) {
+      return kg / 0.45359237;
+    }
+
+    function convertLbToKg(lb) {
+      return lb * 0.45359237;
+    }
+
+    let result;
+    let message = "";
+
+    switch(userChoice) {
+      case 1:
+        result = convertKgToLb(mass);
+        message = `${mass} kg = ${result.toFixed(3)} lb`;
+        break;
+      case 2:
+        result = convertLbToKg(mass);
+        message = `${mass} lb = ${result.toFixed(3)} kg`;
+        break;
+    }
+
+    document.getElementById("output").innerHTML = message;
+  } else {
+    document.getElementById("output").innerHTML = "Exited. No conversion done.";
+  }
+</script>
+
+</body>
+</html>
