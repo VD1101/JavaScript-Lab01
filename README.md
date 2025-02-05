@@ -12,14 +12,8 @@ This is a simple mass converter web application created for Lab-Work#1 of Client
 - Displays results inside a styled container on the webpage.
 
 ## Live Demo
-[Live Demo]( https://vd1101.github.io/JavaScript-Lab01/)
+[ https://vd1101.github.io/JavaScript-Lab01/]
 
-## How to Use
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git
-   ```
-2. Open `index.html` in your browser.
 
 ## Files in Repo
 - `index.html` → Main HTML file with JavaScript.
